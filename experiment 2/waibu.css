@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  text-align: center;
+}
+#pi{
+	text-align: center;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"active;
+	font-size: 20px;
+	color: darkseagreen;
+}
+
+#pi1{
+	margin-left: 40px;
+	color:black;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 12px;
+}
