@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>验证进入网站</title>
+	<script>
+function mOver(obj) {
+  obj.innerHTML = "点击我查看密码！"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "把鼠标移上来~"
+}
+function mDown(obj) {
+  obj.style.backgroundColor = "orange";
+  obj.innerHTML = "123456";
+}
+function mUp(obj) {
+  obj.style.backgroundColor="cadetblue";
+  obj.innerHTML="看清楚了？";
+}
+ function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "123456") {
+	  return alert("欢迎，即将带你进入你太白的世界（点击确定继续...）");
+	
+  }
+	 else{ return alert("验证你是电脑，不予通过");}
+}	
+   </script>
+</head>
+
+<body background="/1.png">
+	<h1 align="center"  style="color: aqua">人机验证系统</h1>
+	<h3 align="center"  style="color: coral">welcome！</h3>
+	<center>
+	<form   name="myForm" action="/demo/action_page.php" onsubmit="return validateForm()" method="post">
+  密码：<input type="text" name="fname">
+  <input type="submit" value="提交" >
+		
+</form>
+		</center>
+	<center>
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)" div onmousedown="mDown(this)"
+		 onmouseup="mUp(this)"
+style="background-color:cadetblue;width:80px;height:15px;padding:40px;">
+把鼠标移上来~</div>
+		</center>
+</body>
+</html>
