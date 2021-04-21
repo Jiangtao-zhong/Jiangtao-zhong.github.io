@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JQurey1</title>
+	<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+	   $("#panel").slideDown(5000);
+  });
+	 $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+	<script>
+$(document).ready(function(){
+  $("#panel").mouseenter(function(){
+    alert('更多内容请访问https:://baike.baidu.com/item/星月夜/52889?fr=aladdin');
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+	body{background-color: darkgrey}
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:slategray;
+	border:solid 1px #0C0808;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+	
+</style>
+	
+</head>
+
+<body>
+	<button id="stop" >停止滑动</button>
+	<div id="flip" >click on this，visit the《The Starry Night》</div>
+	
+<div id="panel" ><image src="en.jpg"  width="1150" height="1100"></image>  <pre>
+  《  星  月  夜 》
+ 是后印象派画家梵·高的代表作之一。
+ 在这幅画中，梵·高用夸张的手法，生动地描绘了充满运动和变化的星空。
+ 夜晚的天空高又远，大星、小星回旋于夜空，金黄的满月形成巨大的漩涡，星云的短线条纠结、盘旋，仿佛让人们看见时光的流逝。
+ 暗绿褐色的柏树像巨大的火焰，是星夜狂欢的响应者。
+天空下，安睡的村庄那么宁静、安详。淡蓝的色调，动感的线条，给人自由的时空感。</pre></div>
+</body>
+</html>
