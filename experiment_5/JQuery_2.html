@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JQ_2</title>
+	<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#1").click(function(){
+    $("img").animate({
+      left:'250px',
+      height:'+=150px',
+      width:'+=150px'
+    });
+  });
+ $("#2").click(function(){
+  $("img").animate({
+      left:'250px',
+      height:'-=150px',
+      width:'-=150px'
+    });
+  });
+});
+</script> 
+</head>
+
+<body bgcolor="slategray">
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;《星月夜》<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%88%E5%A4%9C/52889?fr=aladdin">（The Starry Night）</a></p>
+    <p>&nbsp; &nbsp; &nbsp; 简介：从构图上来说，该画面构图极为准确，画中以树木衬托天空，下部的房舍托起了无边的宇宙，以获得构图上微妙的平衡。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;特别是那些柏树的线条画得流畅而别具一格，正如梵·高自己曾描写的那样：“那些柏树总是占据着我的思绪——从来没有人把它们画得像我看到它们的样子，这使我惊讶。柏树的线条和比例正如埃及金字塔及尖碑那么美丽——在晴朗的风景中的黑色飞溅。”</p>
+	<p>&nbsp; &nbsp; &nbsp; &nbsp;在绘画技法上，梵·高接受了前期印象派的某些特点，不是用简单的线和面来表达物体。而是用点来表现物体的光影，达到了传统画作无法达到的效果。同时，他又注重采用夸张和对比的方法，给光影添加动感。前景中以短促清晰的水平线笔触描绘出来的小镇，与画面上部呈主导趋势的曲线笔触，形成了强烈的对比。教堂的细长尖顶与地平线的交叉，柏树的顶端恰好拦腰穿过旋转横飞的星云，这一切都使画面产生出一种流动的感觉。<br>
+		<button id="1">放大展示</button><br>
+		<button id="2">缩小查看</button><br>
+<img src="en.jpg" style="height:100px;width:100px;position:absolute;"> </p>
+</body>
+</html>
