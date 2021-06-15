@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Echart3</title>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/echarts-4.7.0.min.js"></script>
+</head>
+
+<body>
+<div id="main" style="width: 50%;height:600px;"></div>
+	
+<script type="text/javascript">
+	 
+	  var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+
+var data = [{
+    name: '',
+    children: [{
+        name: 'Physical sciences',
+        value: 22966,
+        children: [{
+            name: 'Materials science',
+            value: 6410
+        }, {
+            name: 'Physics',
+            value: 4883
+        }, {
+            name: 'Chemistry',
+            value: 4663
+        },{
+            name: 'Nanoscience and technology',
+            value: 3035
+        }, {
+            name: 'Optics and photonics',
+            value: 2054
+        }, {
+            name: 'Energy science and technology',
+            value: 707
+        }, {
+            name: 'Engineering',
+            value: 703
+        }, {
+            name: 'Mathematics and computing',
+            value: 313
+        }, {
+            name: 'Astronomy and planetary science',
+            value: 198
+        }]
+    }, {
+        name: 'Earth and environmental sciences',
+        value:5238,
+        children: [{
+            name: 'Ecology',
+            value: 1387
+        }, {
+            name: 'Climate sciences',
+            value: 1049
+        }, {
+            name: 'Solid Earth sciences',
+            value: 665
+        }, {
+            name: 'Biogeochemistry',
+            value: 568
+        }, {
+            name: 'Environmental sciences',
+            value: 352
+        }, {
+            name: 'Ocean sciences',
+            value: 412
+        }, {
+            name: 'Environmental social sciences',
+            value: 199
+        }, {
+            name: 'Natural hazards',
+            value: 143
+        }, {
+            name: 'Hydrology',
+            value: 128
+        }, {
+            name: 'Limnology',
+            value: 36
+        }, {
+            name: 'Climate sciences',
+            value: 1049
+        }, {
+            name: 'Space physics',
+            value: 77
+        }]
+    }, {
+        name: 'Biological sciences',
+        value: 43474,
+        children: [{
+            name: 'Cell biology',
+            value: 4450,
+            itemStyle: {
+                color: 'red'
+            }
+        }, {
+            name: 'Biochemistry',
+            value: 3755
+        }, {
+            name: 'Neuroscience',
+            value: 3166
+        }, {
+            name: 'Molecular biology',
+            value: 3111
+        }, {
+            name: 'Genetics',
+            value: 2940
+        }, {
+            name: 'Biochemistry',
+            value: 3755
+        }, {
+            name: 'Cancer',
+            value: 3117
+        }, {
+            name: 'Microbiology',
+            value: 2706
+        }, {
+            name: 'Immunology',
+            value: 2346
+        }, {
+            name: 'Biological techniques',
+            value: 2069
+        }, {
+            name: 'Biophysics',
+            value: 1509
+        }, {
+            name: 'Biotechnology',
+            value: 1456
+        }, {
+            name: 'Developmental biology',
+            value: 1425
+        }, {
+            name: 'Ecology',
+            value: 1392
+        }, {
+            name: 'Computational biology and bioinformatics',
+            value: 1383
+        }, {
+            name: 'Evolution',
+            value: 1237
+        }, {
+            name: 'Physiology',
+            value: 1037
+        }, {
+            name: 'Structural biology',
+            value: 1865
+        }, {
+            name: 'Plant sciences',
+            value: 995
+        }, {
+            name: 'Chemical biology',
+            value: 1088
+        }, {
+            name: 'Systems biology',
+            value: 595
+        }, {
+            name: 'Stem cells',
+            value: 733
+        }, {
+            name: 'Drug discovery',
+            value: 506
+        }, {
+            name: 'Zoology',
+            value: 361
+        }, {
+            name: 'Psychology',
+            value: 232
+        }]
+    },{
+        name: 'Health sciences',
+        value:5902,
+        children: [{
+            name: 'Diseases',
+            value: 1989
+        }, {
+            name: 'Medical research',
+            value: 1008
+        }, {
+            name: 'Oncology',
+            value: 448
+        }, {
+            name: 'Health care',
+            value: 339
+        }, {
+            name: 'Pathogenesis',
+            value: 365
+        }, {
+            name: 'Anatomy',
+            value: 294
+        }, {
+            name: 'Cardiology',
+            value: 211
+        }, {
+            name: 'Gastroenterology',
+            value: 196
+        }, {
+            name: 'Biomarkers',
+            value: 216
+        }, {
+            name: 'Endocrinology',
+            value: 182
+        }, {
+            name: 'Neurology',
+            value: 176
+        }, {
+            name: 'Molecular medicine',
+            value: 148
+        }, {
+            name: 'Risk factors',
+            value: 84
+        }, {
+            name: 'Rheumatology',
+            value: 80
+        }, {
+            name: 'Nephrology',
+            value: 63
+        }, {
+            name: 'Signs and symptoms',
+            value: 27
+        }, {
+            name: 'Urology',
+            value: 16
+        }]
+    },{
+        name: 'Scientific community and society',
+        value:445,
+        children: [{
+            name: 'Social sciences',
+            value: 184
+        }, {
+            name: 'Scientific community',
+            value: 37
+        }, {
+            name: 'Agriculture',
+            value: 45
+        }, {
+            name: 'Energy and society',
+            value: 63
+        }, {
+            name: 'Developing world',
+            value: 32
+        }, {
+            name: 'Water resources',
+            value: 31
+        }, {
+            name: 'Business and industry',
+            value: 19
+        }, {
+            name: 'Geography',
+            value: 16
+        }, {
+            name: 'Forestry',
+            value: 18
+        }]
+    }]
+}];
+
+option = {
+    visualMap: {
+        type: 'continuous',
+        min: 10,
+        max: 6500,
+        inRange: {
+            color: ['#2F93C8', '#AEC48F', '#FFDB5C', '#F98862']
+        }
+    },
+    series: {
+        type: 'sunburst',
+        data: data,
+        radius: [0, '90%'],
+        label: {
+            rotate: 'radial'
+        }
+    }
+};
+myChart.setOption(option);
+ </script>
+</body>
+</html>
+
