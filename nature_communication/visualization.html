@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>visiualizatin</title>
+<link rel="stylesheet" type="text/css" href="css/allstyle.css"/>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/echarts-4.7.0.min.js"></script>
+
+<style>
+
+	.container{
+    height: 100%;
+		
+	}
+	
+	.visual1{
+    position: absolute;
+    height: 900px;
+    z-index: -1;
+    margin-top: -20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    background-color: #2F2F2F;
+    top: 714px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+/*    width: 1454px;*/
+	width: 96.04%;}
+	.v1{
+    float: left;
+    position: relative;
+	}
+	.v2{
+    float: right;
+    position: relative;
+	}
+	.bottom{
+    position: absolute;
+    top: 1714px;
+	}
+	.footername{
+    position: absolute;
+    left: 5px;
+	}
+
+</style>
+
+</head>
+
+<body>
+<div id="apDiv1">
+  <div id="apDiv2">
+
+	<ul class="top">
+		<li><a href="login.html">log in</a></li>
+		<li><a href="register.html">register</a></li>
+		<li>search</li>
+		<div class="icon-search"></div>
+	</ul>
+	
+  </div>
+  <div id="apDiv3">
+	
+	<ul class="nav">
+	    <p class="name">visualization</p>
+		<li><a href="首页.html">首页</a></li>
+		<li id="li1"><a href="#">subjects</a>
+		    <ul id="ul1">
+			    <li><a href="#"><a href="subject1-Physical sciences.html">Pysical sciences</a></a></li>
+				<li><a href="#"><a href="subject2-Earth and environmental sciences.html">Earth and environmental sciences</a></a></li>
+				<li><a href="#"><a href="subject3-Biological sciences.html">Biological sciences</a></a></li>
+				<li><a href="#"><a href="subject4-Health sciences.html">Health sciences</a></a></li>
+				<li><a href="#"><a href="subject5-Scientific community and society.html">Scientific community and society</a></a></li>
+			</ul>
+			<div class="tri"></div>
+		</li>
+		<li><a href="mapsearch.html">mapping<a></li>
+	</ul>
+	 <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli=document.getElementById('li1');
+	  var oul=document.getElementById('ul1');
+      oli.onmouseover=function(){
+			 oul.style.display='block';
+		 }
+	  oli.onmouseout=function(){
+			 oul.style.display='none';
+		 }
+	 
+	  </script> 
+	  
+	 
+  </div>
+</div>
+	
+<div class="container">
+	<div class="video">
+	  <video src="动态条形图.mp4" width="100%" height="100%" autoplay="autoplay" loop="infinite"></video>
+
+    </div>
+<div class="visual1">
+	<div id="v1" style="width: 40%;height:600px;"></div>
+	<div id="v2" style="width: 40%;height:600px;"></div>
+
+<script type="text/javascript">
+	 
+	  var myChart =echarts.init(document.getElementById('v1'),'dark');
+      var option= {
+    title: {
+        text: '一级学科发文量饼图',
+        subtext: '2012-2021',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+    },
+    series: [
+        {
+            name: '学科发文量',
+            type: 'pie',
+            radius: '50%',
+            data: [
+                {value: 22966, name: 'Physical sciences'},
+                {value: 5248, name: 'Earth and environmental sciences'},
+                {value: 43474, name: 'Biological sciences'},
+                {value: 5902, name: 'Health sciences'},
+                {value: 445, name: 'Scientific community and society'}
+            ],
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+ </script>
+	
+<script type="text/javascript">
+	 
+var chartDom = document.getElementById('v2');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+
+
+option = {
+   title: {
+        text: '二级学科发文量柱状图'
+      },
+
+    dataset: {
+        source: [
+            ['score', 'amount', 'product'],
+            [6410, 6410, 'Materials science'],
+            [4883, 4883, 'Physics'],
+            [4633, 4633, 'Chemistry'],
+            [3035, 3035, 'Nanoscience and technology'],
+            [2054, 2054, 'Optics and photonics'],
+            [707, 707, 'Energy science and technology'],
+            [703, 703, 'Engineering'],
+            [313, 313, 'Mathematics and computing'],
+            [198, 198, 'Astronomy and planetary science'],
+            [1387, 1387, 'Ecology'],
+            [665, 665, 'Climate sciences'],
+            [568, 568, 'Biogeochemistry'],
+            [352, 352, 'Environmental sciences'],
+            [412, 412, 'Ocean sciences'],
+            [199, 199, 'Environmental social sciences'],
+            [143, 143, 'Natural hazards'],
+            [128,128, 'Hydrology'],
+            [36, 36, 'Limnology'],
+            [1049, 1049, 'Climate sciences'],
+            [77, 77, 'Space physics'],
+            [4450, 4450, 'Cell biology'],
+            [3755, 3755, 'Biochemistry'],
+            [3166, 3166, 'Neuroscience'],
+            [3111, 3111, 'Molecular biology'],
+            [2949, 2949, 'Genetics'],
+            [3755, 3755, 'Biochemistry'],
+            [3117, 3117, 'Cancer'],
+            [2706, 2706, 'Microbiology'],
+            [2346, 2346, 'Immunology'],
+            [2069, 2069, 'Biological techniques'],
+            [1509, 1509, 'Biophysics'],
+            [1456, 1456, 'Biotechnology'],
+            [1425, 1425, 'Developmental biology'],
+            [1392, 1392, 'Ecology'],
+            [1383, 1383, 'Computational biology and bioinformatics'],
+            [1237, 1237, 'Evolution'],
+            [1037, 1037, 'Physiology'],
+            [1865, 1865, 'Structural biology'],
+            [995, 995, 'Plant sciences'],
+            [2346, 2346, 'Chemical biology'],
+            [595, 595, 'Systems biology'],
+            [733, 733, 'Stem cells'],
+            [506, 506, 'Drug discovery'],
+            [361, 361, 'Zoology'],
+            [232, 232, 'Psychology'],
+            [1008, 1008, 'Medical research'],
+            [448, 448, 'Oncology'],
+            [339, 339, 'Health care'],
+            [365, 365, 'Pathogenesis'],
+            [294, 294, 'Anatomy'],
+            [211, 211, 'Cardiology'],
+            [196, 196, 'Gastroenterology'],
+            [216, 216, 'Biomarkers'],
+            [182, 182, 'Endocrinology'],
+            [176, 176, 'Neurology'],
+            [148, 148, 'Molecular medicine'],
+            [84, 84, 'Risk factors'],
+            [80, 80, 'Rheumatology'],
+            [63, 63, 'Nephrology'],
+            [27, 27, 'Signs and symptoms'],
+            [16, 16, 'Urology'],
+            [184, 184, 'Social sciences'],
+            [37, 37, 'Scientific community'],
+            [45, 45, 'Agriculture'],
+            [63, 63, 'Energy and society'],
+            [32, 32, 'Developing world'],
+            [31, 31, 'Water resources'],
+            [19,19, 'Business and industry'],
+            [16, 16, 'Geography'],
+            [18, 18, 'Forestry'],
+        ]
+    },
+    grid: {containLabel: true},
+    xAxis: {name: 'amount'},
+    yAxis: {type: 'category'},
+    visualMap: {
+        orient: 'horizontal',
+        left: 'center',
+        min: 71,
+        max: 100,
+        text: ['High', 'Low'],
+        // Map the score column to color
+        dimension: 0,
+        inRange: {
+            color: ['#65B581', '#FFCE34', '#FD665F']
+        }
+    },
+    series: [
+        {
+            type: 'bar',
+            encode: {
+                // Map the "amount" column to X axis.
+                x: 'amount',
+                // Map the "product" column to Y axis
+                y: 'product'
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+
+ </script>
+	
+</div> 
+	
+</div>
+
+<div class="bottom">
+	<div class="bottom1">
+		<p class="footername">NC新视野</p>
+		<a href="#"><img src="image/icon-facebook.gif" alt="Facebook" /></a>
+		<a href="#"><img src="image/icon-twitter.gif" alt="Twitter" /></a>
+		<a href="#"><img src="image/icon-youtube.gif" alt="Youtube" /></a>
+		<p class="contact"><a href="mailto:邮箱：3071297846@qq.com">Contact Us</a></p>
+	</div>
+	<div class="bottom2">
+		<p class="about">南京理工大学经济管理学院信管系</p>
+		<p class="copyright">Copyright &copy; 2021. NC新视野. All Rights Reserved.</p>
+	</div>
+</div>
+	
+</body>
+</html>
