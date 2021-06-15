@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Echart2</title>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/echarts-4.7.0.min.js"></script>
+</head>
+
+<body>
+<div id="main" style="width: 50%;height:600px;"></div>
+	
+<script type="text/javascript">
+	 
+	  var myChart =echarts.init(document.getElementById('main'),'dark');
+      var option= {
+    title: {
+        text: '各学科发文量情况',
+        subtext: '2012-2021',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+    },
+    series: [
+        {
+            name: '学科发文量',
+            type: 'pie',
+            radius: '50%',
+            data: [
+                {value: 22966, name: 'Physical sciences'},
+                {value: 5248, name: 'Earth and environmental sciences'},
+                {value: 43474, name: 'Biological sciences'},
+                {value: 5902, name: 'Health sciences'},
+                {value: 445, name: 'Scientific community and society'}
+            ],
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+ </script>
+</body>
+</html>
