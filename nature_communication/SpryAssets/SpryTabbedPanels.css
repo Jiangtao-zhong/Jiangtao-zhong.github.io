@@ -145,8 +145,9 @@
  * want to style the Content container.
  */
 .TabbedPanelsContent {
-	overflow: hidden;
-	padding: 4px;
+    overflow: hidden;
+    padding: 4px;
+    font-size: 18px;
 }
 
 /* This selector is an example of how to change the appearnce of the currently
