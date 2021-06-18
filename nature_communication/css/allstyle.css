@@ -186,6 +186,10 @@ background-color: currentcolor;
     float: right;
     position: relative;
 	}
+    .v3{
+    float: left;
+    position: relative;
+	}
 /* 整体底部框 */
 .bottom {
     position: absolute;

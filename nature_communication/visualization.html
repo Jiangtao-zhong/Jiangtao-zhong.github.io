@@ -39,6 +39,30 @@
     float: right;
     position: relative;
 	}
+	.v3{
+    float: left;
+    position: relative;
+	}
+	.v4{
+    float: left;
+    position: relative;
+	}
+	.v5{
+    float: left;
+    position: relative;
+	}
+	.v6{
+    float: left;
+    position: relative;
+	}
+	.v7{
+    float: left;
+    position: relative;
+	}
+	.v8{
+    float: left;
+    position: relative;
+	}
 	.bottom{
     position: absolute;
     top: 1714px;
@@ -105,7 +129,13 @@
 <div class="visual1">
 	<div id="v1" style="width: 40%;height:600px;"></div>
 	<div id="v2" style="width: 40%;height:600px;"></div>
-
+	<div id="v3" style="width: 80%;height:600px;"></div>
+    <div id="v4" style="width: 80%;height:600px;"></div>
+	<div id="v5" style="width: 80%;height:600px;"></div>
+	<div id="v6" style="width: 80%;height:600px;"></div>
+	<div id="v7" style="width: 80%;height:600px;"></div>
+	<div id="v8" style="width: 80%;height:600px;"></div>
+	
 <script type="text/javascript">
 	 
 	  var myChart =echarts.init(document.getElementById('v1'),'dark');
@@ -264,6 +294,221 @@ option = {
 myChart.setOption(option);
 
  </script>
+	
+<script type="text/javascript">
+var chartDom = document.getElementById('v3');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: '学科无关属性词词频'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['Biological Sciences', 'Earth and environmental sciences', 'Health sciences', 'Physical sciences', 'Scientific community and society'],
+		top:20
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['figure', 'number', 'text', 'analysis', 'model', 'data', 'change','method','result','effect','example','level','experiment'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name: 'Biological Sciences',
+            type: 'line',
+            stack: '',
+            data: [40972, 25180, 22266, 34656, 24780, 50225, 26921,22414,39290,26144,22063,21952,32087]
+        },
+        {
+            name: 'Earth and environmental sciences',
+            type: 'line',
+            stack: '',
+            data: [4818, 3115, 3634, 4272, 4317, 5746, 5097,3201,5780,3090,3268,2166,1535]
+        },
+        {
+            name: 'Health sciences',
+            type: 'line',
+            stack: '',
+            data: [11380, 7172, 5067, 9827, 7917, 14792, 6774,5504,10614,8506,5259,7264,8828]
+        },
+        {
+            name: 'Physical sciences',
+            type: 'line',
+            stack: '',
+            data: [22752, 16309, 12583, 17129, 24646, 26599, 14853,27448,35929,12912,19734,8307,27189]
+        },
+        {
+            name: 'Scientific community and society',
+            type: 'line',
+            stack: '',
+            data: [1319, 883, 865, 1408, 1168, 1512, 1331,986,1805,1012,981,682,598]
+        }
+    ]
+};
+myChart.setOption(option);
+	</script>
+	
+<script type="text/javascript">
+var chartDom = document.getElementById('v4');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: 'Biological sciences学科相关属性词词频折线图'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['cell', 'protein', 'gene', 'activity', 'field', 'mouse', 'mutant','mutation','treatment','dna','population','activation'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [33401, 24045, 20000, 15317, 14307, 11835, 11359,10183,9181,8491,8126,7781],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+	</script>
+
+<script type="text/javascript">
+var chartDom = document.getElementById('v5');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: 'Earth and environmental sciences学科相关属性词词频'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['area', 'water', 'climate', 'region', 'source', 'temperature', 'address','carbon','future','ocean','concentration','soil'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [2405, 2400, 2131, 2130, 2104, 2080, 1985,1729,1621,1609,1564,1164],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+	</script>
+	
+	<script type="text/javascript">
+var chartDom = document.getElementById('v6');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: 'Health sciences学科相关属性词词频'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['protein', 'patient', 'cancer', 'tumor', 'treatment', 'disease', 'tissue','activation','mutation','marker','inhibitor','antibody'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [5393, 4988, 4916, 4401, 4352, 3634, 3509,3252,3196,2581,2487,2251],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+	</script>
+	
+	<script type="text/javascript">
+var chartDom = document.getElementById('v7');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: 'Physical sciences学科相关属性词词频'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['network', 'cell', 'architecture', 'energy', 'gradient', 'temperature', 'train','spectrum','reaction','crystal','procedure','matrix'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [13667, 7415, 6485, 5867, 5436, 5049, 4069,3808,3736,3649,3575,3559],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+	</script>
+	
+	<script type="text/javascript">
+var chartDom = document.getElementById('v8');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+	
+option = {
+    title: {
+        text: 'Scientific community and society sciences学科相关属性词词频'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['climate', 'temperature', 'energy', 'water', 'variability', 'cell', 'concentration','threshold','regression','yield','match','phenomenon'],
+		axisLabel: {
+                                           interval:0,
+                                           rotate:30
+                                        }
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [504, 444, 359, 327, 263, 233, 187,186,185,173,168,164],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+	</script>
 	
 </div> 
 	
