@@ -1,0 +1,294 @@
+<!doctype html>
+<html style="height: 100%">
+<head>
+<meta charset="utf-8">
+<title>visiualizatin</title>
+<link rel="stylesheet" type="text/css" href="css/allstyle.css"/>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/echarts-4.7.0.min.js"></script>
+
+<style>
+
+	.container1{
+	position: absolute;
+	width: 96.03%;
+	/*	width: 1454px;*/
+/*    height: 500px;*/
+	z-index: -2;
+	margin: 20,auto,auto,0;
+	top: 100px;
+	}
+	.zhexiantu{
+	position: relative;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+    left: auto;
+    top: 700px;
+    margin-left: auto;
+	z-index: -1;
+	}
+	.wrapper1{
+	margin: 0 ;
+    padding:0;
+    width: 700px;
+	}
+	.wenzi_jieshao{
+	margin-top: 0;
+	margin-right: 10;
+	margin-left: 730px;
+	margin-bottom: 0;
+	padding: 0;
+	width: 700px;
+	float: right;
+	}
+	.bottom{
+	position: absolute;
+	top: 1200px;
+	}
+	.footername{
+    position: absolute;
+    left: 5px;
+	}
+
+</style>
+
+</head>
+
+<body  style="height: 100%; margin: 0" bgcolor="#2F2F2F">
+	
+<div id="apDiv1">
+  <div id="apDiv2">
+
+	<ul class="top">
+		<li><a href="login.html">log in</a></li>
+		<li><a href="register.html">register</a></li>
+		<li>search</li>
+		<div class="icon-search"></div>
+	</ul>
+	
+  </div>
+  <div id="apDiv3">
+	
+	<ul class="nav">
+	    <p class="name">visualization</p>
+		<li><a href="首页.html">首页</a></li>
+		<li id="li1"><a href="#">subjects</a>
+		    <ul id="ul1">
+			    <li><a href="#"><a href="subject1-Physical sciences.html">Pysical sciences</a></a></li>
+				<li><a href="#"><a href="subject2-Earth and environmental sciences.html">Earth and environmental sciences</a></a></li>
+				<li><a href="#"><a href="subject3-Biological sciences.html">Biological sciences</a></a></li>
+				<li><a href="#"><a href="subject4-Health sciences.html">Health sciences</a></a></li>
+				<li><a href="#"><a href="subject5-Scientific community and society.html">Scientific community and society</a></a></li>
+			</ul>
+			<div class="tri"></div>
+		</li>
+		<li><a href="mapsearch.html">mapping</a></li>
+	</ul>
+	 <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli=document.getElementById('li1');
+	  var oul=document.getElementById('ul1');
+      oli.onmouseover=function(){
+			 oul.style.display='block';
+		 }
+	  oli.onmouseout=function(){
+			 oul.style.display='none';
+		 }
+	 
+	  </script> 
+	  
+	 
+  </div>
+</div>
+	
+<div class="container1">
+	<link rel="stylesheet" href="css/bubble.css">
+<script type="text/javascript" src="js/bubble.js"></script>
+
+<div class="wrapper1">
+    <div class="tagcloud">
+      <!-- bo大小 co颜色 -->
+      <a class="b02 co01" href="#">figure</a>
+      <a class="b03 co04" href="#">number</a>
+      <a class="b04 co05" href="#">text</a>
+      <a class="b03 co02" href="#">analysis</a>
+      <a class="b04 co03" href="#">model</a>
+      <a class="b01 co06" href="#">data</a>
+	  <a class="b02 co07" href="#">change</a>
+      <a class="b03 co04" href="#">method</a>
+      <a class="b04 co07" href="#">function </a>
+	  <a class="b01 co06" href="#">result</a>
+      <a class="b03 co03" href="#">effect</a>
+      <a class="b02 co01" href="#">example</a>
+      <a class="b04 co07" href="#">discussion</a>
+      <a class="b02 co02" href="#">Train </a>
+      <a class="b04 co07" href="#">information</a>
+	  <a class="b04 co01" href="#">difference </a>
+      <a class="b04 co02" href="#">conclusion</a>
+	  <a class="b03 co03" href="#">level </a>
+      <a class="b04 co04" href="#">finding</a>
+	  <a class="b03 co03" href="#">experiment</a>
+      <a class="b04 co06" href="#">evidence</a>
+		
+      
+    </div>
+</div><!--wrapper-->
+
+<script type="text/javascript">
+    /*3D标签云*/
+    tagcloud({
+        selector: ".tagcloud",  //元素选择器
+        fontsize: 16,       //基本字体大小, 单位px
+        radius: 140,         //滚动半径, 单位px 页面宽度和高度的五分之一
+        mspeed: "slow",   //滚动最大速度, 取值: slow, normal(默认), fast
+        ispeed: "slow",   //滚动初速度, 取值: slow, normal(默认), fast
+        direction: 90,     //初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...
+        keep: true         //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
+    });
+</script>
+	<div class="wenzi_jies">
+	<a class="wenzi_jieshao">whaycaygiagiuahixsafcigi</a>
+	</div>
+</div>
+<div class="zhexiantu">
+		  <div id="container" style="height: 100%"></div>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom,"dark");
+var app = {};
+
+var option;
+
+
+
+option = {
+    title: {
+        text: '属性分布'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data: ['data', 'result', 'figure', 'experiment', 'analysis','model']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['Biological sci', 'Earth and environmental sci', 'Health sci', 'Physical sci', 'Scientific community and so']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: 'data',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [50225,5746,14792,26599,1512]
+        },
+        {
+            name: 'result',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [39290,5780,10614,35929,1805]
+        },
+        {
+            name: 'figure',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [40972,4818,11380,22752,1319]
+        },
+        {
+            name: 'experiment',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [32087,1535,8828,27189,598]
+        },
+		{
+            name: 'model',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [24780,4317,7917,24646,1168]
+        },
+        {
+            name: 'analysis',
+            type: 'line',
+            stack: '总量',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+            focus: 'series'
+            },
+            data: [34656,4272,9827,17129,1408]
+        }
+    ]
+};
+
+if (option && typeof option === 'object') {
+    myChart.setOption(option);
+}
+
+        </script>
+	</div>
+<div class="bottom">
+	<div class="bottom1">
+		<p class="footername">NC新视野</p>
+		<a href="#"><img src="image/icon-facebook.gif" alt="Facebook" /></a>
+		<a href="#"><img src="image/icon-twitter.gif" alt="Twitter" /></a>
+		<a href="#"><img src="image/icon-youtube.gif" alt="Youtube" /></a>
+		<p class="contact"><a href="mailto:邮箱：3071297846@qq.com">Contact Us</a></p>
+	</div>
+	<div class="bottom2">
+		<p class="about">南京理工大学经济管理学院信管系</p>
+		<p class="copyright">Copyright &copy; 2021. NC新视野. All Rights Reserved.</p>
+	</div>
+</div>
+	
+</body>
+</html>
