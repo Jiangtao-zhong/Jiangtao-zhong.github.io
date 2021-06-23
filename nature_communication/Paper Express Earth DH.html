@@ -1,0 +1,152 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<!--
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+-->
+<title>Paper Express Earth DH</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/allstyle.css"/>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/echarts-4.7.0.min.js"></script>
+
+<style type="text/css">
+	body{
+		background-color: #2F2F2F;
+	}
+		.container2{
+    position: absolute;
+    top:120px;
+    width: 100%;
+    height: 800px;
+    z-index: 0;
+    margin-left: 0px;
+
+	}
+.container{
+    height: 100%;
+	
+	background-color: #2F2F2F;
+	}
+	.focus{
+    font-size: 40px;
+    text-align: center;
+    color: #3D9DB6;
+    width: 100%;
+    margin-top: -100px;
+	}
+	.container1{
+    position: absolute;
+	width: 96.03%;
+    z-index: -1;
+    margin: 0 auto;
+    background-color: #2F2F2F;
+    top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+	}
+	.bottom{
+    position: absolute;
+    top: 800px;
+	}
+	.express{
+		font-size: 40px;
+    text-align: center;
+    color: #3D9DB6;
+    width: 100%;
+		position: absolute;
+		top:150px;
+	}
+	.cloud{
+    position: absolute;
+    top: 900px;
+    color: #3D9DB6;
+    font-size: 40px;
+    left: 676px;
+	}
+	.wrapper{
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    background-color: #2F2F2F;
+    top: 900px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    clear: both;
+	}
+	.tagcloud{
+	width: 100%;
+	top: 100px;
+	}
+</style>
+</head>
+
+<body>
+<div id="apDiv1">
+  <div id="apDiv2">
+
+	<ul class="top">
+		<li><a href="login.html">log in</a></li>
+		<li><a href="register.html">register</a></li>
+		<li>search</li>
+		<div class="icon-search"></div>
+	</ul>
+	
+  </div>
+  <div id="apDiv3">
+	
+	<ul class="nav">
+	    <p class="name">NC 新视野</p>
+		<li><a href="visualization.html">visualization</a></li>
+		<li id="li1"><a href="#">subjects</a>
+		    <ul id="ul1">
+			    <li><a href="#"><a href="subject1-Physical sciences.html">Pysical sciences</a></a></li>
+				<li><a href="#"><a href="subject2-Earth and environmental sciences.html">Earth and environmental sciences</a></a></li>
+				<li><a href="#"><a href="subject3-Biological sciences.html">Biological sciences</a></a></li>
+				<li><a href="#"><a href="subject4-Health sciences.html">Health sciences</a></a></li>
+				<li><a href="#"><a href="subject5-Scientific community and society.html">Scientific community and society</a></a></li>
+			</ul>
+			<div class="tri"></div>
+		</li>
+		<li><a href="mapsearch.html">mapping</a></li>
+		<li><a href="personal.html"><i class="icon iconfont icon-geren"></i>personal</a></li>
+	</ul>
+	 <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli=document.getElementById('li1');
+	  var oul=document.getElementById('ul1');
+      oli.onmouseover=function(){
+			 oul.style.display='block';
+		 }
+	  oli.onmouseout=function(){
+			 oul.style.display='none';
+		 }
+	 
+	  </script> 
+	  
+	 
+  </div>
+</div>
+
+<iframe scrolling="no" frameborder="0" class="container2" src="Paper Express Earth.html"></iframe>	
+<div class="bottom">
+	<div class="bottom1">
+		<p class="footername">NC新视野</p>
+		<a href="#"><img src="image/icon-facebook.gif" alt="Facebook" /></a>
+		<a href="#"><img src="image/icon-twitter.gif" alt="Twitter" /></a>
+		<a href="#"><img src="image/icon-youtube.gif" alt="Youtube" /></a>
+		<p class="contact"><a href="mailto:邮箱：3071297846@qq.com">Contact Us</a></p>
+	</div>
+	<div class="bottom2">
+		<p class="about">南京理工大学经济管理学院信管系</p>
+		<p class="copyright">Copyright &copy; 2021. NC新视野. All Rights Reserved.</p>
+	</div>
+</div>
+
+</body>
+</html>
