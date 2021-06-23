@@ -139,6 +139,7 @@ a{text-decoration: none;}
     margin-top: -40px;
     margin-left: 120px;
 		}
+
 .tri2 {
     margin-bottom: 20px;
     width: 0px;
@@ -150,6 +151,7 @@ a{text-decoration: none;}
     margin-top: -40px;
     margin-left: 110px;
 		}
+
 .tri3 {
     margin-bottom: 20px;
 
@@ -179,19 +181,24 @@ a{text-decoration: none;}
     float: left;
     margin-left: 40px;
 }
-
- .nav #li1:hover {
+.nav li:hover {
     background-color: #000000;
     color: #FFFFFF;
     font-size: 21px;
 }
-.nav li ul li:hover{
+/*一二级菜单鼠标移动效果 */
+.nav #li1:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 21px;
+}
+.nav #li1 ul li:hover{
 		background:#444444;
 		color:#ffffff;
 		font-size:18px;
 	}
-
-.nav li ul li{
+/*二级菜单样式 	*/
+.nav #li1 ul li{
     list-style: none;
     width: 360px;
     height: 60px;
@@ -202,17 +209,7 @@ a{text-decoration: none;}
     background: #000000;
     margin-left: -0px;	
 	}
-.nav>li{
-		float:left;
-		position: relative;
-	}
-#apDiv1 .nav li ul{
-		position: absolute;
-		left:0px;
-		top:75px;
-		display:none;
-	}
-
+/*一二级菜单鼠标移动效果 */
 .nav #li2:hover {
     background-color: #000000;
     color: #FFFFFF;
@@ -256,6 +253,16 @@ a{text-decoration: none;}
     color: #FFFFFF;
     background: #000000;
     margin-left: -0px;	
+	}
+.nav>li{
+		float:left;
+		position: relative;
+	}
+.nav li ul{
+		position: absolute;
+		left:0px;
+		top:75px;
+		display:none;
 	}
 .top{
     color: #FFFFFF;
@@ -384,3 +391,8 @@ background-color: currentcolor;
     bottom: -40px;
     margin-bottom: -46px;
 	}
+#geren0{
+    position: relative;
+    left: -5px;
+    top: -2px;
+}
