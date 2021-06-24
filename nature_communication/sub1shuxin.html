@@ -193,7 +193,7 @@ img{border:none 0;}
 		<p class="subject">Pysical sciences</p>
 		<li><a href="login.html">log in</a></li>
 		<li><a href="register.html">register</a></li>
-		<li>search</li>
+		<li><a href="mapsearch.html">search</a></li>
 		<div class="icon-search"></div>
 	</ul>
 	
@@ -201,9 +201,23 @@ img{border:none 0;}
   <div id="apDiv3">
 	
 	<ul class="nav">
-	    <p class="name"><a href="首页.html">首页</a></p>
-		<li><a href="visualization.html">visualization</a></li>
-		<li id="li1"><a href="#">subjects</a>
+	    <p class="name">NC 新视野</p>
+		<li id="li2"><a href="Home.html">Home</a>
+		    <ul id="ul2">
+			    <li><a href="#jianjie">期刊简介</a></li>
+				<li><a href="#zhishu">影响指数</a></li>
+				<li><a href="#artical">文章速递</a></li>
+			</ul>
+			<div class="tri2"></div>
+		</li>
+		<li id="li3"><a href="#">Peer Review</a>
+		    <ul id="ul3">
+			    <li><a href="peer review.html">关于Peer Review</a></li>
+				<li><a href="mapsearch.html">mapping</a></li>
+			</ul>
+			<div class="tri3"></div>
+		</li>
+		<li id="li1"><a href="#">Subjects</a>
 		    <ul id="ul1">
 			    <li><a href="#"><a href="subject1-Physical sciences.html">Pysical sciences</a></a></li>
 				<li><a href="#"><a href="subject2-Earth and environmental sciences.html">Earth and environmental sciences</a></a></li>
@@ -211,21 +225,46 @@ img{border:none 0;}
 				<li><a href="#"><a href="subject4-Health sciences.html">Health sciences</a></a></li>
 				<li><a href="#"><a href="subject5-Scientific community and society.html">Scientific community and society</a></a></li>
 			</ul>
-			<div class="tri"></div>
+			<div class="tri1"></div>
 		</li>
-		<li><a href="mapsearch.html">mapping</a></li>
-		<li><a href="personal.html"><i class="icon iconfont icon-geren"></i>personal</a></li>
+		<li><a href="visualization.html">Visualization</a></li>
+		
+		<li><a href="personal.html"><i class="icon iconfont icon-geren"></i>Personal</a></li>
 	</ul>
 	 <script>/* 显示二级菜单里栏JS鼠标效果 */
-	  var oli=document.getElementById('li1');
-	  var oul=document.getElementById('ul1');
-      oli.onmouseover=function(){
-			 oul.style.display='block';
+	  var oli1=document.getElementById('li1');
+	  var oul1=document.getElementById('ul1');
+
+      oli1.onmouseover=function(){
+			 oul1.style.display='block';
 		 }
-	  oli.onmouseout=function(){
-			 oul.style.display='none';
+	  oli1.onmouseout=function(){
+			 oul1.style.display='none';
 		 }
+	  </script> 
+	  
+	   <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli2=document.getElementById('li2');
+	  var oul2=document.getElementById('ul2');
+
+      oli2.onmouseover=function(){
+			 oul2.style.display='block';
+		 }
+	  oli2.onmouseout=function(){
+			 oul2.style.display='none';
+		 }
+	  </script> 
 	 
+	   <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli3=document.getElementById('li3');
+	  var oul3=document.getElementById('ul3');
+
+      oli3.onmouseover=function(){
+			 oul3.style.display='block';
+		 }
+	  oli3.onmouseout=function(){
+			 oul3.style.display='none';
+		 }
 	  </script> 
 	  
 	 
@@ -243,34 +282,34 @@ img{border:none 0;}
 <script>
 	$( document ).ready( function() {
 		var entries = [ 
-			{ label: 'network', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'cell', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'architecture', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'energy', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'gradient', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'temperature', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'train', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'spectrum', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'reaction', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'crystal', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'procedure', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'matrix', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'http', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'electron', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'noise', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'vector', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'substrate', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'detection', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'water', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'code', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'treatment', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'interface', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'computation', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'ion', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'citation', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'robustness', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'quantum', url: 'sub1shuxin.html', target: '_top' },
-			{ label: 'coupling', url: 'sub1shuxin.html', target: '_top' }
+			{ label: 'network', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'cell', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'architecture', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'energy', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'gradient', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'temperature', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'train', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'spectrum', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'reaction', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'crystal', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'procedure', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'matrix', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'http', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'electron', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'noise', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'vector', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'substrate', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'detection', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'water', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'code', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'treatment', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'interface', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'computation', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'ion', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'citation', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'robustness', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'quantum', url: 'subject1-Physical sciences.html', target: '_top' },
+			{ label: 'coupling', url: 'subject1-Physical sciences.html', target: '_top' }
 		];
 
 
@@ -360,13 +399,14 @@ img{border:none 0;}
 			<ul class="current" style="display: block;">  
 				<li>
 					<div class="it_expertxt"><a href="映射.html">
-						<p class="it_expertit">Article number: 3676 (2021) | 16 June 2021</p>
-						<p class="it_experconter">Evidence for the Fulde–Ferrell–Larkin–Ovchinnikov state in bulk NbS2</p></a>
+						<p class="it_expertit">Article number: 1524 (2021) | 09 March 2021</p>
+						<p class="it_experconter">The impact of contact tracing and household bubbles on deconfinement strategies for COVID-19</p></a>
 					</div>
 					<div class="it_expertxt"><a href="映射.html">
-						<p class="it_expertit">Article number: 3536 (2021) | 10 June 2021</p>
-						<p class="it_experconter">Asymmetric benzylic C(sp3)−H acylation via dual nickel and photoredox catalysis</p></a>
+						<p class="it_expertit">Article number: 3547 (2021) | 10 June 2021</p>
+						<p class="it_experconter">A robotic prebiotic chemist probes long term reactions of complexifying mixtures</p></a>
 					</div>
+					
 					<div class="it_expertxt"><a href="映射.html">
 						<p class="it_expertit">Article number: 2941 (2021) | 19 May 2021</p>
 						<p class="it_experconter">Nanostructure-specific X-ray tomography reveals myelin levels, integrity and axon orientations in mouse and human nervous tissue</p></a>
@@ -389,12 +429,12 @@ img{border:none 0;}
 			<ul class="current" style="display: none;">  
 				<li>
 					<div class="it_expertxt"><a href="映射.html">
-						<p class="it_expertit">Article number: 1524 (2021) | 09 March 2021</p>
-						<p class="it_experconter">The impact of contact tracing and household bubbles on deconfinement strategies for COVID-19</p></a>
+						<p class="it_expertit">Article number: 3676 (2021) | 16 June 2021</p>
+						<p class="it_experconter">Evidence for the Fulde–Ferrell–Larkin–Ovchinnikov state in bulk NbS2</p></a>
 					</div>
 					<div class="it_expertxt"><a href="映射.html">
-						<p class="it_expertit">Article number: 3547 (2021) | 10 June 2021</p>
-						<p class="it_experconter">A robotic prebiotic chemist probes long term reactions of complexifying mixtures</p></a>
+						<p class="it_expertit">Article number: 3536 (2021) | 10 June 2021</p>
+						<p class="it_experconter">Asymmetric benzylic C(sp3)−H acylation via dual nickel and photoredox catalysis</p></a>
 					</div>
 					<div class="it_expertxt"><a href="映射.html">
 						<p class="it_expertit">Article number: 3031 (2021) | 28 May 2021</p>
