@@ -1,6 +1,5 @@
 <!doctype html>
-<html style="height: 100%">
-<head>
+<html style="height: 100%"><head>
 <meta charset="utf-8">
 <title>visiualizatin</title>
 <link rel="stylesheet" type="text/css" href="css/allstyle.css"/>
@@ -9,14 +8,19 @@
 
 <style>
 
+
 	.container1{
-	position: absolute;
+    position: absolute;
 	width: 96.03%;
-	/*	width: 1454px;*/
-/*    height: 500px;*/
-	z-index: -2;
-	margin: 20,auto,auto,0;
-	top: 100px;
+    z-index: -1;
+	margin-top: 20px;
+    background-color: #2E3141;
+    top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
 	}
 	.zhexiantu{
 	position: relative;
@@ -71,9 +75,23 @@
   <div id="apDiv3">
 	
 	<ul class="nav">
-	    <p class="name">visualization</p>
-		<li><a href="首页.html">首页</a></li>
-		<li id="li1"><a href="#">subjects</a>
+	    <p class="name">NC 新视野</p>
+		<li id="li2"><a href="Home.html">Home</a>
+		    <ul id="ul2">
+			    <li><a href="#jianjie">期刊简介</a></li>
+				<li><a href="#zhishu">影响指数</a></li>
+				<li><a href="#artical">文章速递</a></li>
+			</ul>
+			<div class="tri2"></div>
+		</li>
+		<li id="li3"><a href="#">Peer Review</a>
+		    <ul id="ul3">
+			    <li><a href="#">关于Peer Review</a></li>
+				<li><a href="mapsearch.html">mapping</a></li>
+			</ul>
+			<div class="tri3"></div>
+		</li>
+		<li id="li1"><a href="#">Subjects</a>
 		    <ul id="ul1">
 			    <li><a href="#"><a href="subject1-Physical sciences.html">Pysical sciences</a></a></li>
 				<li><a href="#"><a href="subject2-Earth and environmental sciences.html">Earth and environmental sciences</a></a></li>
@@ -81,20 +99,48 @@
 				<li><a href="#"><a href="subject4-Health sciences.html">Health sciences</a></a></li>
 				<li><a href="#"><a href="subject5-Scientific community and society.html">Scientific community and society</a></a></li>
 			</ul>
-			<div class="tri"></div>
+			<div class="tri1"></div>
 		</li>
-		<li><a href="mapsearch.html">mapping</a></li>
+		<li><a href="visualization.html">Visualization</a></li>
+		
+		<li><a href="personal.html">
+<!--			<i class="icon iconfont icon-geren"></i>-->
+			Personal</a></li>
 	</ul>
 	 <script>/* 显示二级菜单里栏JS鼠标效果 */
-	  var oli=document.getElementById('li1');
-	  var oul=document.getElementById('ul1');
-      oli.onmouseover=function(){
-			 oul.style.display='block';
+	  var oli1=document.getElementById('li1');
+	  var oul1=document.getElementById('ul1');
+
+      oli1.onmouseover=function(){
+			 oul1.style.display='block';
 		 }
-	  oli.onmouseout=function(){
-			 oul.style.display='none';
+	  oli1.onmouseout=function(){
+			 oul1.style.display='none';
 		 }
+	  </script> 
+	  
+	   <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli2=document.getElementById('li2');
+	  var oul2=document.getElementById('ul2');
+
+      oli2.onmouseover=function(){
+			 oul2.style.display='block';
+		 }
+	  oli2.onmouseout=function(){
+			 oul2.style.display='none';
+		 }
+	  </script> 
 	 
+	   <script>/* 显示二级菜单里栏JS鼠标效果 */
+	  var oli3=document.getElementById('li3');
+	  var oul3=document.getElementById('ul3');
+
+      oli3.onmouseover=function(){
+			 oul3.style.display='block';
+		 }
+	  oli3.onmouseout=function(){
+			 oul3.style.display='none';
+		 }
 	  </script> 
 	  
 	 
@@ -146,9 +192,7 @@
         keep: true         //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
     });
 </script>
-	<div class="wenzi_jies">
-	<a class="wenzi_jieshao">whaycaygiagiuahixsafcigi</a>
-	</div>
+	
 </div>
 <div class="zhexiantu">
 		  <div id="container" style="height: 100%"></div>
